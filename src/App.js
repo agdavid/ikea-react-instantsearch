@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { InstantSearch } from 'react-instantsearch/dom';
+import Search from './components/Search';
 
 class App extends Component {
   render() {
@@ -14,7 +15,7 @@ class App extends Component {
           apiKey="3f46604e5ceef1479ae2ca58ae4f0a71"
           indexName="ikea"
         >
-
+          <Search />
         </InstantSearch>
       </div>
     );
