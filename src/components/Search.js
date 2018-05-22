@@ -7,7 +7,9 @@ import {
   CurrentRefinements,
   ClearRefinements,
   Stats,
-  Menu
+  Menu,
+  PoweredBy,
+  RatingMenu
 } from 'react-instantsearch/dom';
 import Product from './Product';
 
@@ -19,6 +21,9 @@ const Sidebar = () => {
       <hr/>
       <h5>Color Menu</h5>
       <Menu attribute="colors" />
+      <hr/>
+      <h5>Ratings</h5>
+      <RatingMenu attribute="rating"/>
     </div>
   );
 }
@@ -28,6 +33,7 @@ const Main = () => {
     <div className="col-md-9">
       <Stats />
       <SearchBox />
+      <PoweredBy />
       <CurrentRefinements />
       <ClearRefinements />
       <Hits hitComponent={Product}/>
