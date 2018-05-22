@@ -9,9 +9,10 @@ const Product = ({ hit }) => {
 
   return (
     <div style={productStyle}>
-      <span className="hit-name">
+      <span>
         <Highlight attribute="name" hit={hit} />
-        | {hit.price}
+        | <Highlight attribute="description" hit={hit} />
+        | <Highlight attribute="price" hit={hit} />
       </span>
     </div>
   );
