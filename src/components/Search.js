@@ -9,7 +9,8 @@ import {
   Stats,
   Menu,
   PoweredBy,
-  RatingMenu
+  RatingMenu,
+  ToggleRefinement
 } from 'react-instantsearch/dom';
 import Product from './Product';
 
@@ -24,6 +25,9 @@ const Sidebar = () => {
       <hr/>
       <h5>Ratings</h5>
       <RatingMenu attribute="rating"/>
+      <hr />
+      <h5>Toggle Single Value</h5>
+      <ToggleRefinement attribute="materials" value="Glass" label="Glass Products"/>
     </div>
   );
 }
