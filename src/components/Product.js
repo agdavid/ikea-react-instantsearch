@@ -1,5 +1,5 @@
 import React from 'react';
-import { Highlight } from 'react-instantsearch/dom';
+import { Highlight, Snippet } from 'react-instantsearch/dom';
 
 const Product = ({ hit }) => {
 
@@ -11,7 +11,7 @@ const Product = ({ hit }) => {
     <div style={productStyle}>
       <span>
         <Highlight attribute="name" hit={hit} />
-        | <Highlight attribute="description" hit={hit} />
+        | <Snippet attribute="description" hit={hit} />
         | <Highlight attribute="price" hit={hit} />
       </span>
     </div>
