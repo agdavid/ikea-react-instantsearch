@@ -6,16 +6,19 @@ import {
   Pagination,
   CurrentRefinements,
   ClearRefinements,
-  Stats
+  Stats,
+  Menu
 } from 'react-instantsearch/dom';
 import Product from './Product';
 
 const Sidebar = () => {
   return (
     <div className="col-md-3">
-      <h5>Category</h5>
+      <h5>Category Refinement</h5>
       <RefinementList attribute="categories.lvl0" />
       <hr/>
+      <h5>Color Menu</h5>
+      <Menu attribute="colors" />
     </div>
   );
 }
